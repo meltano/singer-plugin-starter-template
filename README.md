@@ -1,6 +1,6 @@
-# `meltano-cicd-sample-template`
+# `singer-plugin-starter-template`
 
-A project template for DataOps CI/CD on GitHub.
+A starter template for building custom Singer taps and targets.
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/meltano/meltano-cicd-lab-template)
 
@@ -9,28 +9,21 @@ A project template for DataOps CI/CD on GitHub.
 To test, first use the `Open in VS Code` link above to open the project in VS Code using Docker containers.
 
 _Note: The only prerequisites to get started is to install **VS Code** and **Docker**. As needed, VS Code will prompt 
-you to install any additional extensions needed to <a href="vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https%3A%2F%2Fgithub.com%2Fmeltano%2Fmeltano-cicd-lab-template">open the project</a>._
+you to install any additional extensions needed to open the project._
 
-### Run a simple Meltano pipeline
+### Docs for this lab
 
-Once you've opened the project, test that meltano is running executing the following sample pipeline
-in a new VS Code terminal:
+The docks for this lab are pulled from the SDK documentation [Building an New Tap or Target](https://sdk.meltano.com/en/latest/dev_guide.html#building-a-new-tap-or-target).
 
-```bash
-meltano elt tap-carbon-intensity target-jsonl 
-```
+## Pre-Lab Instructions and Prep
 
-Debugging:
+1. ["Build Your Own Tap" Slide Deck](https://docs.google.com/presentation/d/1Z9O5ndQUQewC3gq8A_FP8jnfv0OSBKOpU3Fmcjrrv6c/edit?usp=sharing)
+2. [Tap Developer's Worksheet](https://gitlab.com/meltano/academy/-/blob/main/labs/build_your_own_tap.md#choose-an-api) - new or existing
 
-- If you get a message that the plugin is not yet installed, you might need to wait until all installs have
-  completed. These should automatically run in a new terminal the first time you open the repo.
-- If the plugins are still not available and you don't see an open terminal with the install progress, you
-  can create a new terminal and manually run `meltano install` to install any missing plugins.
-
-### Launch the web UI
+## Cookiecutter quick start
 
 ```bash
-meltano ui start 
+cookiecutter https://gitlab.com/meltano/sdk --directory="cookiecutter/tap-template"
 ```
 
-After running the above command, you should see an option from VS Code to "Open in Browser". If not, you can manually navigate to http://localhost:5000.
+Once you’ve answered the cookiecutter prompts, follow the instructions in the generated README.md file to complete your new tap or target. You can also reference the Meltano Tutorial for a more detailed guide.
