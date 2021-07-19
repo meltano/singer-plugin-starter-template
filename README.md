@@ -2,7 +2,7 @@
 
 A starter template for building custom Singer taps and targets.
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/meltano/meltano-cicd-lab-template)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/meltano/singer-plugin-starter-template)
 
 ## Testing
 
